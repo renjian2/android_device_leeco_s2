@@ -850,6 +850,20 @@ int IPACM_Iface::init_fl_rule(ipa_ip_type iptype)
 		memcpy(&(m_pFilteringTable->rules[3]), &flt_rule_entry, sizeof(struct ipa_flt_rule_add));
 
 #ifdef FEATURE_IPA_ANDROID
+		/* Add the ipv6 tcp fragment filtering rule. */
+
+		IPACMDBG_H("Adding IPv6 TCP fragment filter rule\n");
+
+		flt_rule_entry.rule.attrib.attrib_mask &= ~((uint32_t)IPA_FLT_DST_ADDR);
+
+		flt_rule_entry.rule.attrib.attrib_mask |= IPA_FLT_NEXT_HDR;
+		flt_rule_entry.rule.attrib.u.v6.next_hdr = IPACM_FIREWALL_IPPROTO_TCP;
+
+		flt_rule_entry.rule.attrib.attrib_mask |= IPA_FLT_FRAGMENT;
+
+		memcpy(&(m_pFilteringTable->rules[4]), &flt_rule_entry,
+			sizeof(struct ipa_flt_rule_add));
+
 		IPACMDBG_H("Add TCP ctrl rules: total num %d\n", IPV6_DEFAULT_FILTERTING_RULES);
 		memset(&flt_rule_entry, 0, sizeof(struct ipa_flt_rule_add));
 

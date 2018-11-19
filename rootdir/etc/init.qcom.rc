@@ -545,3 +545,8 @@ service time_daemon /system/vendor/bin/time_daemon
     class main
     user root
     group root
+
+#Create PERFD deamon related dirs
+mkdir /data/vendor/perfd 0770 root system
+chmod 2770 /data/vendor/perfd
+rm /data/vendor/perfd/default_values

@@ -491,7 +491,7 @@ vendor/lib64/libsmemlog.so
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -framework/QtiTelephonyServicelibrary.jar
 -framework/qcrilhook.jar
--framework/qti-telephony-common.jar
+-framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml

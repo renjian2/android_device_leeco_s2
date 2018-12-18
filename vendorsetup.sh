@@ -1,1 +1,1 @@
-add_lunch_combo lineage_s2-userdebug
+add_lunch_combo liquid_s2-userdebug

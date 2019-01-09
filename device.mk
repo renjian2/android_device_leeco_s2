@@ -307,25 +307,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Perf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
-    $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
-    $(LOCAL_PATH)/configs/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
-    $(LOCAL_PATH)/configs/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
-
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    vendor.enable_prefetch=1 \
-    vendor.iop.enable_uxe=1 \
-    vendor.iop.enable_prefetch_ofr=1 \
-    vendor.perf.iop_v3.enable=1 \
-    ro.vendor.at_library=libqti-at.so \
-    persist.vendor.qti.games.gt.prof=1
-
 # Powerhint configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
@@ -389,9 +370,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    thermal.msm8952 \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
+    thermal.msm8952
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \

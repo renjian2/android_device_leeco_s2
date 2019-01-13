@@ -151,7 +151,7 @@ echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
 echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
 echo 400000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 59000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
-echo 1190400 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+echo 806400 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo "1 400000:60 691200:80" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 
 # enable governor for perf cluster

@@ -23,4 +23,4 @@
 /data/goodix(/.*)?                                         u:object_r:goodix_data_file:s0
 /dev/i2c_smartpa                                           u:object_r:smartpa_device:s0
 
-/system/bin/perfservice                                    u:object_r:perfservice_exec:s0
+/system/vendor/bin/thermanager                             u:object_r:thermanager_exec:s0

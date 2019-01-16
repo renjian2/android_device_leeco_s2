@@ -1,1 +1,0 @@
-allow hal_perf vendor_mpctl_prop:file r_file_perms;

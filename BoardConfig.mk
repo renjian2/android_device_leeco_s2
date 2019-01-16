@@ -111,7 +111,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BACKLIGHT_PATH := "/sys/class/leds/lcd-backlight/brightness"
 BLINK_PATH := "/sys/class/leds/red/blink"
-WITH_LINEAGE_CHARGER := false
+WITH_LINEAGE_CHARGER := true
 
 # CNE
 BOARD_USES_QCNE := true
@@ -215,6 +215,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USE_SDCLANG := true
+TARGET_POWERHAL_VARIANT := qcom
+LINEAGE_POWERHAL_EXTENSION := qcom
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/leeco/s2/power/power_ext.c
 
 # Render
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so

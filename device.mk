@@ -379,8 +379,8 @@ PRODUCT_PACKAGES += \
     thermanager
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermanager.xml:system/vendor/etc/thermanager.xml \
-    $(LOCAL_PATH)/configs/thermanager_X526.xml:system/vendor/etc/thermanager_X526.xml
+    $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml \
+    $(LOCAL_PATH)/configs/thermanager_X526.xml:system/etc/thermanager_X526.xml
 
 # USB
 PRODUCT_PACKAGES += \

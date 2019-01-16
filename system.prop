@@ -225,6 +225,9 @@ camera.tnr.video=1
 ro.camera.notify_nfc=1
 camera.notify_nfc=1
 
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+
 #
 # rqbalance specific values
 #

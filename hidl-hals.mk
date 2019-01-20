@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
 
 # Consumer IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-service.leeco
+    android.hardware.ir@1.0-service.leeco_8952
 
 # Display
 PRODUCT_PACKAGES += \

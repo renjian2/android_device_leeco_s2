@@ -1,6 +1,5 @@
 ro.sf.lcd_density             u:object_r:sf_lcd_density_prop:s0
 oem.device.imeicache              u:object_r:qcom_ims_prop:s0
-ro.wcnss.serialno                 u:object_r:wcnss_prop:s0
 serialno                          u:object_r:serialno_prop:s0
 
 vendor.min_freq_0                 u:object_r:vendor_mpctl_prop:s0

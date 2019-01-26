@@ -39,3 +39,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 # Release name
 PRODUCT_RELEASE_NAME := s2
+
+# AOSiP maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Renji"

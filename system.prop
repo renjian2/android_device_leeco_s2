@@ -119,7 +119,7 @@ mm.enable.qcom_parser=4194303
 ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Netmgrd
-ro.use_data_netmgrd=true
+ro.vendor.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 

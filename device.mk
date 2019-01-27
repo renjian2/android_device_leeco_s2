@@ -139,7 +139,7 @@ PRODUCT_COPY_FILES +=  \
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
-    GoogleCameraMod
+    Camera2
 
 ifneq ($(USE_PROPRIETARY_CAMERA),true)
 PRODUCT_PACKAGES += \

@@ -138,7 +138,7 @@ PRODUCT_COPY_FILES +=  \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Camera2
+    Snap
 
 ifneq ($(USE_PROPRIETARY_CAMERA),true)
 PRODUCT_PACKAGES += \

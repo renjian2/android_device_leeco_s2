@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp.mk
+    $(LOCAL_DIR)/aicp_s2.mk

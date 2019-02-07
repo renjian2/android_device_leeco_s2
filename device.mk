@@ -320,14 +320,14 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.sh \
-    init.qcom.post_boot.sh
+    init.qcom.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc \
     init.s2.usb.rc \
     ueventd.qcom.rc \
+    init.qcom.power.rc \
     init.safailnet.rc
 
 # RCS

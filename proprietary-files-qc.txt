@@ -231,15 +231,12 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8952.so
 
-# GPS - from Mi A2 jasmine_sprout 9 PKQ1.180904.001 V10.0.1.0.PDIMIFJ release-keys
-etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
-etc/permissions/com.qualcomm.location.xml|78b2c4d3f4d053f7d7b3e27a60a8d9e65ac583c3
-etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
-etc/permissions/privapp-permissions-com.qualcomm.location.xml|055fb40299c0a2340bb1b2c9be218a4d2c0f8c72
-framework/com.qti.location.sdk.jar|97c5f36a7383b5755b4c9dcb194fecec19ae86a7
-framework/izat.xt.srv.jar|dd43374a25e1318551de3dae2f7bbb418f2f0f48
-lib64/liblocationservice_jni.so|2cdb4f1085e8d71cdcbe3e17673e13a39adf6786
-lib64/libxt_native.so|4f1063ec145b241d74b2178e2aadafa5c9b386b2
+# GPS - from Mi A2 Lite daisy_sprout 9 PKQ1.180917.001/V10.0.3.0.PDLMIXM release-keys
+lib/vendor.qti.gnss@1.0.so|eddf81581610bdad45674d31e9b88eb8a9d08784
+lib/vendor.qti.gnss@1.1.so|fea7124d30c04636974dfdbe1a348ff249d897fe
+lib/vendor.qti.gnss@1.2.so|818c951a47baa82f72da4266e61e41cfef16a67c
+lib/vendor.qti.gnss@2.0.so|a559459c08f995fc9b1c92a63777058f8f1c0070
+lib/vendor.qti.gnss@2.1.so|a3554a924e9e20c02d9411a5221c19fba3374a84
 lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
 lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
 lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2

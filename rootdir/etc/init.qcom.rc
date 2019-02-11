@@ -417,8 +417,7 @@ on property:sys.boot_completed=1
 on property:vold.decrypt=trigger_restart_framework
     start vendor.wcnss-service
     start wcnss-service
-    stop vendor.camera-provider-2-4
-    start vendor.camera-provider-2-4
+    restart vendor.camera-provider-2-4
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
@@ -573,8 +572,7 @@ service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/ms
     writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.surfaceflinger=restarting
-    stop vendor.hwcomposer-2-1
-    start vendor.hwcomposer-2-1
+    restart vendor.hwcomposer-2-1
 
 service vendor.time_daemon /system/vendor/bin/time_daemon
     class main

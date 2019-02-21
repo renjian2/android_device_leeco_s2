@@ -4,8 +4,7 @@ on init
     write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 0
     write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 0
 
-on boot
-    # Bring CPUs online
+   # Bring CPUs online
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
@@ -41,7 +40,6 @@ on enable-low-power
     write /sys/module/msm_thermal/core_control/enabled 0
 
     # Enable governor for power cluster
-    write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 95
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
@@ -63,7 +61,6 @@ on enable-low-power
     chown system system /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
 
     # Enable governor for perf cluster
-    write /sys/devices/system/cpu/cpu4/online 1
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 95
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
@@ -124,6 +121,8 @@ on enable-low-power
     # Disable L2 GDHS on 8976
     write /sys/module/lpm_levels/system/a53/a53-l2-gdhs/idle_enabled "N"
     write /sys/module/lpm_levels/system/a72/a72-l2-gdhs/idle_enabled "N"
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled "N"
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled "N"
 
     # Setup cpusets
     write /dev/cpuset/top-app/cpus 0-7
@@ -149,12 +148,15 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 4
 
 on charger
+    # Offline all cores other than CPU0
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/devices/system/cpu/cpu4/online 0
     write /sys/devices/system/cpu/cpu5/online 0
-    write /sys/module/msm_thermal/core_control/cpus_offlined 14
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
     # Enable UFS powersaving
     write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1

@@ -309,10 +309,6 @@ PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
 
-# Powerhint configuration file
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml

@@ -112,8 +112,8 @@ on post-fs-data
     # fingerprint
     chown system system  /dev/goodix_fp
     chmod 0644 /dev/goodix_fp
-    chown system system  /system/vendor/bin/gx_fpd
-    chmod 0755 /system/vendor/bin/gx_fpd
+    chown system system  /system/bin/gx_fpd
+    chmod 0755 /system/bin/gx_fpd
 
     chmod 660 /persist/serialno
     chown system system /persist/serialno
